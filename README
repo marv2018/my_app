@@ -1,0 +1,19 @@
+Tests outside application code
+
+Putting tests into an extra directory outside your actual application code might be useful if you have many functional
+tests or for other reasons want to keep tests separate from actual application code (often a good idea):
+
+https://docs.pytest.org/en/6.2.x/goodpractices.html
+https://docs.pytest.org/en/6.2.x/pythonpath.html#pytest-vs-python-m-pytest
+
+Executing pytest:
+Call 'python -m pytest test/test_abc'
+
+This is almost equivalent to invoking the command line script pytest [...] directly,
+except that calling via python will also add the current directory to sys.path.
+
+Option 1:
+pyinstaller my_app/run_app1.py --onefile
+
+Option 2:
+pyinstaller run_app2.py --onefile

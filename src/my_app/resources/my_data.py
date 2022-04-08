@@ -1,0 +1,2 @@
+class MyDataClass:
+	employee = "Ben"
